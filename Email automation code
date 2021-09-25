@@ -1,0 +1,9 @@
+import smtplib
+
+server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+server.login("Sender_email","Sender_password")
+server.sendmail("Sender_email", "Email_To", "Subject: Python Intro, \n\n good day all, \n\n\n This is an automatic email")
+
+server.quit()
+
+print("Your email has been sent successfully")
